@@ -1,10 +1,9 @@
-console.log("HELLOW WOLRD")
 
-const nome = "João"
-const idade = 17
-console.log("Meu nome é",nome,"e tenho",idade,"de idade")
-//Teste
+const primeiroNome = "João"
+const segundoNome = "Ramirez"
 const idadeNumero = 17
-const idadeNumero = idadeNumero.topString()
-console.log(typeof idadeNumero)
-console.log(typeof idadeTexto)
+const serEstudante = "Sim"
+console.log("o seu nome é", primeiroNome,"seu segundo nome é", segundoNome, "você tem", idadeNumero,"anos de idade.","É estudante?", serEstudante)
+
+let nome = prompt("qual é o seu nome?")
+alert(`Seu nome é ${nome}`)
