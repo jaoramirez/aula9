@@ -1,37 +1,54 @@
-//let resultado
-
-//resultado = 3 + 4
-///alert(resultado)
-
-//resultado = (3+5)/2
-//alert(resultado)
-
-//resultado = 3+5/2
-//alert(resultado)
-
-//resultado = (4-5)*-1
-//alert(resultado)
-
-//resultado = 234 % 5 
-//alert(resultado)
-
-let primeiroNumero 
-let segundoNumero
-let resultado 
+//let a 
+//let b
+//let c
+//let resultado 
 
 //Leitura de dados informados pelpo úsuario
-primeiroNumero = prompt("Digite o primeiro numero") //3
-segundoNumero = prompt("Digite o segunfo numero")   //3
+//a = true
+//b = false
+//c = true
 
 //teste de comparação
-resultado = primeiroNumero === segundoNumero
-alert(resultado)
+//resultado = a && b
+//alert(resultado)
 
-resultado = primeiroNumero !== segundoNumero
-alert(resultado)
+//resultado = b && c 
+//alert(resultado)
 
-resultado = primeiroNumero < segundoNumero
-alert(resultado)
+//resultado = a && c 
+//alert(resultado)
 
-resultado = primeiroNumero > segundoNumero
-alert(resultado)
+//resultado = a && b && c 
+//alert(resultado)
+
+//resultado = a || b
+//alert(resultado)
+
+//resultado = b || c
+//alert(resultado)
+
+//resultado = a || c
+//alert(resultado)
+
+//resultado = a || b || c
+//alert(resultado)
+
+let nome
+let anoNascimento
+let anoAtual
+let idade
+let maiorIdade
+let idade2050
+
+nome = prompt("Qual é o seu nome ?")
+anoNascimento = prompt("Que ano em que você nasceu ?")
+anoAtual = prompt("Que anos estamos?")
+
+idade = anoAtual - anoNascimento
+maiorIdade = idade >= 18
+idade2050 = 2050 - anoNascimento
+
+alert("seu nome é "${nome})
+alert("Você tem "${idade})
+alert("É maior de idade?" ${maiorIdade})
+alert(idade2050)
