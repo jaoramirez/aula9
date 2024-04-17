@@ -1,4 +1,4 @@
-let idade 
+/*let idade 
 let idadeAmigo
 let diferençadeidade
 
@@ -9,4 +9,10 @@ resultado = idade >= idadeAmigo
 alert(`sua idade é mairo que a do seu amigo? ${resultado}`)
 
 diferençadeidade = idade - idadeAmigo
-alert(`a difereça de idade é ${diferençadeidade}`)
+alert(`a difereça de idade é ${diferençadeidade}`)*/
+
+let numeroUm 
+
+numeroUm = prompt("Digite um número par:")
+
+console.log((numeroUm % 2)== 0)
