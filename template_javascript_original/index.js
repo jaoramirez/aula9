@@ -10,9 +10,9 @@ console.log(typeof horasTrabalho)
 console.log(typeof salarioDia)
 // converte o que é nessesário 
 let horasTrabNumber = Number(horasTrabalho)
-let saldiasNumber = Number(salarioDia)
+let salDiaNumber = Number(salarioDia)
 // processando valores
-let valHoraNumber = horasTrabNumber/saldiasNumber
+let valHoraNumber = horasTrabNumber/salDiaNumber
 // Convesão para não dar erro no NULL
 let valorHora = String(valHoraNumber)
 const mensagem = "Seu valor hora e "+ valorHora + "!!!"
@@ -22,3 +22,5 @@ console.log(typeof mensagem)
 console.log(mensagem)
 //Saída de valores pra Front End
 alert(mensagem)
+
+const 
