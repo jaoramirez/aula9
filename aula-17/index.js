@@ -133,7 +133,7 @@ alert(`O primeiro numero é divisível pelo segundo? ${resultado3}`)
 resultado4 = (num2 % num1) == 0
 alert(`O segundo numero é divisível pelo primeiro? ${resultado4}`)*/
 
-alert("a) Calcule e mostre o valor de 77°F em  K, mostrando a unidade no console também.")
+/*alert("a) Calcule e mostre o valor de 77°F em  K, mostrando a unidade no console também.")
 a = (77 - 32)*(5/9) + 273.15
 alert(a)
 
@@ -150,4 +150,10 @@ alert("d) Altere o último item para que o usuário insira o valor em graus Cels
 d = prompt("escolha um número")
 let umd = (d)*(9/5)+ 32  
 let doisd = (d - 32)*(5/9) + 273.15
-alert(`${umd} e ${doisd}`)
+alert(`${umd} e ${doisd}`)*/
+
+//alert("a) Calcule e mostre o valor a ser pago por uma residência que consuma 280 quilowatt-hora")
+//casa = 280 * 0.05
+//alert(`Essa residência ira pagar ${casa} reais`)
+
+
