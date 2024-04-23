@@ -35,7 +35,7 @@ alert("Essas são as minhas comidas preferidas:" + "\n" + listaDeComidas[0] + "\
 const comida1 = prompt("E qual é a sua comida favorita?")
 alert("Essas são as minhas comidas preferidas:" + "\n" + comida1 + "\n" + listaDeComidas[1] + "\n" + listaDeComidas[2] + "\n" + listaDeComidas[3] + "\n" + listaDeComidas[4])*/
 
-let array
+/*let array
 array = []
 let listaDeTarefas = array
 
@@ -53,4 +53,5 @@ let tarefasUsuario = prompt("Digite uma tarefa que você precise realizar no dia
 
 let indiceUsuario = prompt("Digite o índice de uma tarefa que já realizou: ")
 listaDeTarefas.splice(indiceUsuario,1)
-console.log(listaDeTarefas)
+console.log(listaDeTarefas)*/
+
