@@ -214,12 +214,12 @@ for (let i = 0; i < arrayOriginal.length; i++) {
 console.log(numerosPares);*/
 
 //d) Criar um novo array contendo strings no formato "O elemento do índex i é: numero" e imprimir este novo array:
-const arrayOriginal = [10, 20, 30, 40, 50];
+/*const arrayOriginal = [10, 20, 30, 40, 50];
 const stringsFormatadas = [];
 for (let i = 0; i < arrayOriginal.length; i++) {
   stringsFormatadas.push(`O elemento do índex ${i} é: ${arrayOriginal[i]}`);
 }
-console.log(stringsFormatadas);
+console.log(stringsFormatadas);*/
 
 /*e) Imprimir o maior e o menor números contidos no array original:
 const arrayOriginal = [10, 5, 20, 30, 15];
