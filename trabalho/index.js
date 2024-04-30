@@ -1,5 +1,7 @@
 
-  function imprimeMenu(){
+//aqui vai ir o nome do usuario do banco de dados, tem que estra fora para ser global 
+
+function imprimeMenu(){
   let mensagem = ""
   mensagem += "==================================\n"
   mensagem += "Digite um número de acordo com a opção:\n"
@@ -20,15 +22,20 @@ function cadastraUsuario(){
     let peso = prompt("Digite seu peso:")
     let sangue = prompt("Digite seu tipo sanguíneo:")
     let data = prompt("Digite sua data de doação:")
-    alert(`${nome}\n${idade} anos\n${peso} kg\n${sangue}\n${data}`)
-}
+}alert(`${nome}\n${idade} anos\n${peso} kg\n${sangue}\n${data}`)
+ 
+listaDoadores.push(nome)
 
 function listaDoadores(){
-  let mensagem = ""
-  let nome 
-  mensagem += "1- Ana Clara \n 2- Carlos Alberto \n 3- Vito Gustavo \n 4- Maria Vitória \n","5-",{nome}
+  let mensagem = ''
+  mensagem += alert(`${nome}`)
 }
 
+function buscarPorSangue(){
+let mensagem = ""
+ mensagem = prompt("Digite o tipo sanguíneo que deseja procurar:")
+
+}
 
 function main(){
   let option = 0
@@ -40,7 +47,10 @@ function main(){
         break;
       case 2: 
         listaDoadores()
-        break
+        break; 
+       case 3:
+       buscarPorSangue()
+       break;
 
       default:
         break
@@ -50,4 +60,3 @@ function main(){
 
 //Chama função principal
 main()
-//oi
