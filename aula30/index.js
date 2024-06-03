@@ -25,11 +25,15 @@ const resposta = outraFuncao(textoDoUsuario)
 console.log(resposta)*/
 //mostra se a frase e verdadeira quanfo tem a palavra cenoura 
 
-function usuario(){
+//exercicio1
+/*function usuario(){
 let nome = prompt("Qual é o seu nome?")
 let idade = prompt("Qual é a sua idade?")
 let endereço = prompt("Qual o seu endereço?")
-let profissao = prompt ("Qual é a sua profissão?")
+let profissao = prompt("Qual é a sua profissão?")
 alert(`Eu sou ${nome}, tenho ${idade} anos, moro em ${endereço} e sou ${profissao}.`)
 }
-usuario()
+usuario()*/
+// para a rezsposta da b é a mesma coisa é só add a string e Number 
+
+// atividade 2

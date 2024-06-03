@@ -23,12 +23,13 @@ function cadastraUsuario(){
     let sangue = prompt("Digite seu tipo sanguíneo:")
     let data = prompt("Digite sua data de doação:")
 }alert(`${nome}\n${idade} anos\n${peso} kg\n${sangue}\n${data}`)
- 
-listaDoadores.push(nome)
+   
+
 
 function listaDoadores(){
   let mensagem = ''
   mensagem += alert(`${nome}`)
+  
 }
 
 function buscarPorSangue(){
