@@ -1,6 +1,8 @@
 
 //aqui vai ir o nome do usuario do banco de dados, tem que estra fora para ser global 
 
+let usuario = []
+
 function imprimeMenu(){
   let mensagem = ""
   mensagem += "==================================\n"
@@ -17,30 +19,36 @@ function imprimeMenu(){
 }
 
 function cadastraUsuario(){
-    let nome = prompt("Digite seu nome:")
-    let idade = prompt("Digite sua idade:")
-    let peso = prompt("Digite seu peso:")
-    let sangue = prompt("Digite seu tipo sanguíneo:")
-    let data = prompt("Digite sua data de doação:")
-}alert(`${nome}\n${idade} anos\n${peso} kg\n${sangue}\n${data}`)
-   
-
+    nome = prompt("Digite seu nome:"),
+    idade = prompt("Digite sua idade:"),
+    peso = prompt("Digite seu peso:"),
+    sangue = prompt("Digite seu tipo sanguíneo:"),
+    data = prompt("Digite sua data de doação:")
+    usuario.push({nome, idade, peso, sangue, data})
+    alert(`${nome}\n${idade} anos\n${peso} kg\n${sangue}\n${data}`)
+}
 
 function listaDoadores(){
-  let mensagem = ''
-  mensagem += alert(`${nome}`)
-  
-}
+    let mensagem = ""
+    mensagem += "LISTA DE DOADORES:\n"
+    mensagem += "Nome: Jéssica Rost,  Idade: 30 anos, Tipo sanguineo: A-,  Peso: 70kg \n"
+    mensagem += "Nome: Pedro Rosa,    Idade: 19 anos, Tipo sanguineo: 0-,  Peso: 80kg \n"
+    mensagem += "Nome: Gustavo silva, Idade: 24 anos, Tipo sanguineo: AB-, Peso: 63kg \n"
+    mensagem += "Nome: laura Costa,   Idade: 49 anos, Tipo sanguineo: B+,  Peso: 59kg \n"
+    for (let doador of usuario){
+      mensagem = mensagem + `Nome; ${doador.nome},   Idade: ${doador.idade},   Tipo sanguineo: ${doador.sangue},  Pesso: ${doador.peso}kg \n`
+  }
+  alert(mensagem)
+ }
 
 function buscarPorSangue(){
 let mensagem = ""
  mensagem = prompt("Digite o tipo sanguíneo que deseja procurar:")
-
 }
 
 function main(){
   let option = 0
-  while(option !== 5 ){
+  while(option !== 5){
     option = imprimeMenu()
     switch(option){
       case 1:
@@ -49,12 +57,12 @@ function main(){
       case 2: 
         listaDoadores()
         break; 
-       case 3:
+      case 3:
        buscarPorSangue()
        break;
 
       default:
-        break
+        break;
     }
   }
 }
