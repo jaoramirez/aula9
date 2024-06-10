@@ -1,9 +1,9 @@
 
 //aqui vai ir o nome do usuario do banco de dados, tem que estra fora para ser global 
 
-let usuario = []
+ let usuario = []
 
-function imprimeMenu(){
+ function imprimeMenu(){
   let mensagem = ""
   mensagem += "==================================\n"
   mensagem += "Digite um número de acordo com a opção:\n"
@@ -16,65 +16,87 @@ function imprimeMenu(){
   mensagem += "==================================\n"
   let opcao = Number(prompt(mensagem))
   return opcao 
-}
+  //faz voltar para as outras opções
+ }
 
-function cadastraUsuario(){
+ function cadastraUsuario(){
     nome = prompt("Digite seu nome:"),
     idade = prompt("Digite sua idade:"),
     peso = prompt("Digite seu peso:"),
     sangue = (prompt("Digite seu tipo sanguíneo:")).toUpperCase(),
-    data = prompt("Digite sua data de doação:mm/dd/aa")
-    usuario.push({nome, idade, peso, sangue, data})
+    data = prompt("Digite sua data de doação: mm/dd/aa")
+    usuario.push({nome, idade, peso, sangue, data}) 
+    // O push serve para colocar as informações dentro do objeto 
     alert(`${nome}\n${idade} anos\n${peso} kg\n${sangue}\n${data}`)
-}
+  }
 
-function listaDoadores(){
+ function listaDoadores(){
+  //let para decrarar algo 
     let mensagem = ""
     mensagem += "------------------------\n"
     mensagem += "LISTA DE DOADORES:\n"
     mensagem += "------------------------\n"
-    mensagem += "Nome: Jéssica Rost,  Idade: 30 anos, Tipo sanguineo: A-,  Peso: 70kg \n"
-    mensagem += "Nome: Pedro Rosa,    Idade: 19 anos, Tipo sanguineo: 0-,  Peso: 80kg \n"
-    mensagem += "Nome: Gustavo silva, Idade: 24 anos, Tipo sanguineo: AB-, Peso: 63kg \n"
-    mensagem += "Nome: laura Costa,   Idade: 49 anos, Tipo sanguineo: B+,  Peso: 59kg \n"
- 
-    //CODIGO TESTE - DELETAR DEPOIS
-    //mensagem += completaEspacos(30,usuario[0].nome) + "|"
-    //mensagem += completaEspacos(9,usuario[0].idade) + "|\n"
-
+ //a mensgem servepara mostrar oque etsa escrito
     for (let doador of usuario){
-     mensagem = mensagem + `Nome: ${doador.nome} |Idade: ${doador.idade} |Tipo sanguineo: ${doador.sangue} |Pess: ${doador.peso}kg | Data: ${doador.data}\n`
+     mensagem = mensagem + ` |Nome: ${doador.nome}\n |Idade: ${doador.idade}\n |Tipo sanguineo: ${doador.sangue}\n |Pess: ${doador.peso}kg \n | Data: ${doador.data}\n------------------------\n`
   }
   alert(mensagem)
  }
-
- //function completaEspacos(tam,prop){
- // let strTratada = prop
- // let espFalt = tam - prop.length 
- // for(let i=0; i <= espFalt; i++) {
- //     strTratada = strTratada + "_"
-// }
-// return strTratada
-//}
-//fica de curiosodade 
-//tentar fazer funsionar
-
-function buscarPorSangue(){
+ 
+ function buscarPorSangue(){
  if (usuario.length === 0){
-  alert("Não existe doadores com este tipo de sanguíneo!")
- } else {const buscarTipoSanguineo = prompt("Digite o tipo sanguíneo:").toUpperCase()
+  alert("Não existe doadores registrados!")
+ } 
 
+ const buscarTipoSanguineo = prompt("Digite o tipo sanguíneo que deseja buscar:").toUpperCase()
+ let existe = false
  let mensagem = ``
-for (let doador of usuario){
-  if (doador.sangue.includes(buscarTipoSanguineo)){
-  mensagem += `\n Doador: ${doador.nome}\n Idade: ${doador.idade}\n Peso: ${doador.peso}\n Tipo Sanguíneo: ${doador.sangue}`
-    }
-   }
-  alert(mensagem);
- }
-}
 
-function main(){
+  for (let doador of usuario){
+  // colocar oque é includs
+    if (doador.sangue.includes(buscarTipoSanguineo)){
+   //if/else são blocos que permitem fazer uma condicional Eles recebem uma condição e o código
+   // ○ do if é executado se a condição for true
+   // ○ do else é executado se a condição for false
+    
+      mensagem +="Lista de doadores do tipo sanguíneo desejado:\n"
+      mensagem +="----------------------------------------------------\n"
+      mensagem =  mensagem + ` | Doador: ${doador.nome}\n | Idade: ${doador.idade}\n | Peso: ${doador.peso}kg\n | Tipo Sanguíneo: ${doador.sangue}\n------------------------\n`
+      existe = true
+    } 
+  }
+  if(!existe){
+    mensagem = "Não há nenhum doador registrado com esse tipo sanguíneo!!"
+  }
+ alert(mensagem)
+ }
+
+
+ function buscarPorData(){
+    if (usuario.length === 0){
+     alert("Não existe doadores registrados!!")
+     return// retorna a função
+    } 
+
+    const buscarData = prompt("Digite o mês que deseja buscar:")
+   let existe = false
+    let mensagem = ``
+
+   for (let doador of usuario){//for… of… : Permite percorrer os elementos de um array de uma forma bem mais simples de se ler
+     if (doador.data.includes(buscarData)){
+        mensagem +="Lista de doadores na data desejada:\n"
+        mensagem +="----------------------------------------------------\n"
+        mensagem =  mensagem + ` | Doador: ${doador.nome}\n | Idade: ${doador.idade}\n | Peso: ${doador.peso}kg\n | Tipo Sanguíneo: ${doador.sangue}\n | Data: ${doador.data}\n------------------------\n`
+        existe = true
+      }
+    }
+    if(!existe){
+      mensagem = "Nenhum doador encontrado nessa data de doação!!"
+    }
+   alert(mensagem)
+ }
+ // função é um bloco de codigo que pode sere chamdo apartir de seu nome 
+ function main(){
   let option = 0
   while(option !== 5){
     option = imprimeMenu()
@@ -87,15 +109,24 @@ function main(){
         break; 
       case 3:
        buscarPorSangue()
-       break;
+        break;
       case 4:
-        bucasrPorData()
+        buscarPorData()
+        break;
+      case 5:
+        alert ("Saindo do sistema!")
         break;
       default:
+        alert("Opção invalida, tentar novamente.")
         break;
     }
   }
-}
+ }
 
-//Chama função principal
-main()
+ //Chama função principal
+ main()
+
+//● Numbers: representam números
+//● Strings: representam texto
+//● Boolean: são tipos que recebem apenas dois valores: /verdadeiro (true) ou falso (false)
+// typeof: permite ver o tipo do valor de uma variáve
